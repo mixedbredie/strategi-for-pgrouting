@@ -1,5 +1,5 @@
 # strategi-for-pgrouting
-Building a pgRouting network from Ordnance Survey's Strategi dataset.
+Building a pgRouting network from Ordnance Survey's Strategi dataset.  The SQL in the assets directory contains everything to get you up and running.
 
 Get the data
 ------------
@@ -9,20 +9,24 @@ Download the Strategi shapefiles for the UK from https://www.ordnancesurvey.co.u
 Merge the roads
 ---------------
 
-+ unzip the downloaded strategi data
-+ using QGIS you can merge all the roads layers to make one layer.
-+ Vector Menu > Data Management > Merge Shapefiles To One
-+ Choose all roads layers
-+ create merged layer
++ unzip the downloaded strategi data to a suitable location.
++ using QGIS you can merge all the roads shapefiles to make one shapefile layer.
++ From the Vector Menu choose Data Management > Merge Shapefiles To One
++ Choose all roads layers from the folder
++ Save the merged roads layer
 + Add the new layer to QGIS
 
 Load to the database
 --------------------
 
 + Use the DB Manager in QGIS to load the data to PostGIS
-+ create schema - os_strategi (or use public)
-+ create table - strat_rds
-+ set gid, geometry field, SRID 27700, create spatial index.
++ Optionally create a new schema: os_strategi (or use public)
++ Create table: strat_rds
++ Set the primary key field: gid 
++ Set the geometry field: geometry 
++ Set the SRID: 27700
++ Check box to create single part features
++ Check the box to create spatial index.
 
 Create a network table
 ----------------------
