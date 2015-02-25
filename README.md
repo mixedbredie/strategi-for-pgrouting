@@ -19,12 +19,12 @@ Merge the roads
 Load to the database
 --------------------
 
-+ Use the DB Manager in QGIS to load the data to PostGIS
-+ Optionally create a new schema: os_strategi (or use public)
-+ Create table: strat_rds
-+ Set the primary key field: gid 
-+ Set the geometry field: geometry 
-+ Set the SRID: 27700
++ Use the DB Manager in QGIS to load the data to PostGIS. There are ~250K road features.
++ Optionally create a new schema: **os_strategi** (or use public)
++ Create table: **strat_rds**
++ Set the primary key field: **gid** 
++ Set the geometry field: **geometry** 
++ Set the SRID: **27700**
 + Check box to create single part features
 + Check the box to create spatial index.
 
